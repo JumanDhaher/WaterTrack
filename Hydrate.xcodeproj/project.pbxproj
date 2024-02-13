@@ -1,0 +1,1026 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FECD2532B7BA0AA00ECB1C9 /* HydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */; };
+		6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */; };
+		6FECD2572B7BA0AB00ECB1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECD2562B7BA0AB00ECB1C9 /* Assets.xcassets */; };
+		6FECD25A2B7BA0AB00ECB1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECD2592B7BA0AB00ECB1C9 /* Preview Assets.xcassets */; };
+		6FECD2642B7BA0AB00ECB1C9 /* HydrateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2632B7BA0AB00ECB1C9 /* HydrateTests.swift */; };
+		6FECD26E2B7BA0AB00ECB1C9 /* HydrateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD26D2B7BA0AB00ECB1C9 /* HydrateUITests.swift */; };
+		6FECD2702B7BA0AB00ECB1C9 /* HydrateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD26F2B7BA0AB00ECB1C9 /* HydrateUITestsLaunchTests.swift */; };
+		6FECD2762B7BA0AB00ECB1C9 /* Hydrate Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6FECD2752B7BA0AB00ECB1C9 /* Hydrate Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6FECD27B2B7BA0AB00ECB1C9 /* HydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */; };
+		6FECD27D2B7BA0AB00ECB1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */; };
+		6FECD27F2B7BA0AC00ECB1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */; };
+		6FECD2822B7BA0AC00ECB1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECD2812B7BA0AC00ECB1C9 /* Preview Assets.xcassets */; };
+		6FECD28C2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD28B2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift */; };
+		6FECD2962B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2952B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift */; };
+		6FECD2982B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FECD2602B7BA0AB00ECB1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FECD24E2B7BA0AA00ECB1C9;
+			remoteInfo = Hydrate;
+		};
+		6FECD26A2B7BA0AB00ECB1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FECD24E2B7BA0AA00ECB1C9;
+			remoteInfo = Hydrate;
+		};
+		6FECD2772B7BA0AB00ECB1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FECD2742B7BA0AB00ECB1C9;
+			remoteInfo = "Hydrate Watch App";
+		};
+		6FECD2882B7BA0AC00ECB1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FECD2742B7BA0AB00ECB1C9;
+			remoteInfo = "Hydrate Watch App";
+		};
+		6FECD2922B7BA0AC00ECB1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FECD2742B7BA0AB00ECB1C9;
+			remoteInfo = "Hydrate Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6FECD29E2B7BA0AC00ECB1C9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6FECD2762B7BA0AB00ECB1C9 /* Hydrate Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6FECD24F2B7BA0AA00ECB1C9 /* Hydrate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydrate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateApp.swift; sourceTree = "<group>"; };
+		6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FECD2562B7BA0AB00ECB1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FECD2592B7BA0AB00ECB1C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FECD25F2B7BA0AB00ECB1C9 /* HydrateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HydrateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD2632B7BA0AB00ECB1C9 /* HydrateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateTests.swift; sourceTree = "<group>"; };
+		6FECD2692B7BA0AB00ECB1C9 /* HydrateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HydrateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD26D2B7BA0AB00ECB1C9 /* HydrateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateUITests.swift; sourceTree = "<group>"; };
+		6FECD26F2B7BA0AB00ECB1C9 /* HydrateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6FECD2752B7BA0AB00ECB1C9 /* Hydrate Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hydrate Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateApp.swift; sourceTree = "<group>"; };
+		6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FECD2812B7BA0AC00ECB1C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FECD2872B7BA0AC00ECB1C9 /* Hydrate Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydrate Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD28B2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppTests.swift; sourceTree = "<group>"; };
+		6FECD2912B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydrate Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FECD2952B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FECD24C2B7BA0AA00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD25C2B7BA0AB00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2662B7BA0AB00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2722B7BA0AB00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2842B7BA0AC00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD28E2B7BA0AC00ECB1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FECD2462B7BA0AA00ECB1C9 = {
+			isa = PBXGroup;
+			children = (
+				6FECD2512B7BA0AA00ECB1C9 /* Hydrate */,
+				6FECD2622B7BA0AB00ECB1C9 /* HydrateTests */,
+				6FECD26C2B7BA0AB00ECB1C9 /* HydrateUITests */,
+				6FECD2792B7BA0AB00ECB1C9 /* Hydrate Watch App */,
+				6FECD28A2B7BA0AC00ECB1C9 /* Hydrate Watch AppTests */,
+				6FECD2942B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests */,
+				6FECD2502B7BA0AA00ECB1C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FECD2502B7BA0AA00ECB1C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD24F2B7BA0AA00ECB1C9 /* Hydrate.app */,
+				6FECD25F2B7BA0AB00ECB1C9 /* HydrateTests.xctest */,
+				6FECD2692B7BA0AB00ECB1C9 /* HydrateUITests.xctest */,
+				6FECD2752B7BA0AB00ECB1C9 /* Hydrate Watch App.app */,
+				6FECD2872B7BA0AC00ECB1C9 /* Hydrate Watch AppTests.xctest */,
+				6FECD2912B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FECD2512B7BA0AA00ECB1C9 /* Hydrate */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */,
+				6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */,
+				6FECD2562B7BA0AB00ECB1C9 /* Assets.xcassets */,
+				6FECD2582B7BA0AB00ECB1C9 /* Preview Content */,
+			);
+			path = Hydrate;
+			sourceTree = "<group>";
+		};
+		6FECD2582B7BA0AB00ECB1C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD2592B7BA0AB00ECB1C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6FECD2622B7BA0AB00ECB1C9 /* HydrateTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD2632B7BA0AB00ECB1C9 /* HydrateTests.swift */,
+			);
+			path = HydrateTests;
+			sourceTree = "<group>";
+		};
+		6FECD26C2B7BA0AB00ECB1C9 /* HydrateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD26D2B7BA0AB00ECB1C9 /* HydrateUITests.swift */,
+				6FECD26F2B7BA0AB00ECB1C9 /* HydrateUITestsLaunchTests.swift */,
+			);
+			path = HydrateUITests;
+			sourceTree = "<group>";
+		};
+		6FECD2792B7BA0AB00ECB1C9 /* Hydrate Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */,
+				6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */,
+				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
+				6FECD2802B7BA0AC00ECB1C9 /* Preview Content */,
+			);
+			path = "Hydrate Watch App";
+			sourceTree = "<group>";
+		};
+		6FECD2802B7BA0AC00ECB1C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD2812B7BA0AC00ECB1C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6FECD28A2B7BA0AC00ECB1C9 /* Hydrate Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD28B2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift */,
+			);
+			path = "Hydrate Watch AppTests";
+			sourceTree = "<group>";
+		};
+		6FECD2942B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6FECD2952B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift */,
+				6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Hydrate Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FECD24E2B7BA0AA00ECB1C9 /* Hydrate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD29F2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate" */;
+			buildPhases = (
+				6FECD24B2B7BA0AA00ECB1C9 /* Sources */,
+				6FECD24C2B7BA0AA00ECB1C9 /* Frameworks */,
+				6FECD24D2B7BA0AA00ECB1C9 /* Resources */,
+				6FECD29E2B7BA0AC00ECB1C9 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FECD2782B7BA0AB00ECB1C9 /* PBXTargetDependency */,
+			);
+			name = Hydrate;
+			productName = Hydrate;
+			productReference = 6FECD24F2B7BA0AA00ECB1C9 /* Hydrate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FECD25E2B7BA0AB00ECB1C9 /* HydrateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD2A22B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "HydrateTests" */;
+			buildPhases = (
+				6FECD25B2B7BA0AB00ECB1C9 /* Sources */,
+				6FECD25C2B7BA0AB00ECB1C9 /* Frameworks */,
+				6FECD25D2B7BA0AB00ECB1C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FECD2612B7BA0AB00ECB1C9 /* PBXTargetDependency */,
+			);
+			name = HydrateTests;
+			productName = HydrateTests;
+			productReference = 6FECD25F2B7BA0AB00ECB1C9 /* HydrateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6FECD2682B7BA0AB00ECB1C9 /* HydrateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD2A52B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "HydrateUITests" */;
+			buildPhases = (
+				6FECD2652B7BA0AB00ECB1C9 /* Sources */,
+				6FECD2662B7BA0AB00ECB1C9 /* Frameworks */,
+				6FECD2672B7BA0AB00ECB1C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FECD26B2B7BA0AB00ECB1C9 /* PBXTargetDependency */,
+			);
+			name = HydrateUITests;
+			productName = HydrateUITests;
+			productReference = 6FECD2692B7BA0AB00ECB1C9 /* HydrateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6FECD2742B7BA0AB00ECB1C9 /* Hydrate Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD29B2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch App" */;
+			buildPhases = (
+				6FECD2712B7BA0AB00ECB1C9 /* Sources */,
+				6FECD2722B7BA0AB00ECB1C9 /* Frameworks */,
+				6FECD2732B7BA0AB00ECB1C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hydrate Watch App";
+			productName = "Hydrate Watch App";
+			productReference = 6FECD2752B7BA0AB00ECB1C9 /* Hydrate Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FECD2862B7BA0AC00ECB1C9 /* Hydrate Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD2A82B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch AppTests" */;
+			buildPhases = (
+				6FECD2832B7BA0AC00ECB1C9 /* Sources */,
+				6FECD2842B7BA0AC00ECB1C9 /* Frameworks */,
+				6FECD2852B7BA0AC00ECB1C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FECD2892B7BA0AC00ECB1C9 /* PBXTargetDependency */,
+			);
+			name = "Hydrate Watch AppTests";
+			productName = "Hydrate Watch AppTests";
+			productReference = 6FECD2872B7BA0AC00ECB1C9 /* Hydrate Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6FECD2902B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FECD2AB2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch AppUITests" */;
+			buildPhases = (
+				6FECD28D2B7BA0AC00ECB1C9 /* Sources */,
+				6FECD28E2B7BA0AC00ECB1C9 /* Frameworks */,
+				6FECD28F2B7BA0AC00ECB1C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FECD2932B7BA0AC00ECB1C9 /* PBXTargetDependency */,
+			);
+			name = "Hydrate Watch AppUITests";
+			productName = "Hydrate Watch AppUITests";
+			productReference = 6FECD2912B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FECD2472B7BA0AA00ECB1C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					6FECD24E2B7BA0AA00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					6FECD25E2B7BA0AB00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 6FECD24E2B7BA0AA00ECB1C9;
+					};
+					6FECD2682B7BA0AB00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 6FECD24E2B7BA0AA00ECB1C9;
+					};
+					6FECD2742B7BA0AB00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					6FECD2862B7BA0AC00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 6FECD2742B7BA0AB00ECB1C9;
+					};
+					6FECD2902B7BA0AC00ECB1C9 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 6FECD2742B7BA0AB00ECB1C9;
+					};
+				};
+			};
+			buildConfigurationList = 6FECD24A2B7BA0AA00ECB1C9 /* Build configuration list for PBXProject "Hydrate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FECD2462B7BA0AA00ECB1C9;
+			productRefGroup = 6FECD2502B7BA0AA00ECB1C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FECD24E2B7BA0AA00ECB1C9 /* Hydrate */,
+				6FECD25E2B7BA0AB00ECB1C9 /* HydrateTests */,
+				6FECD2682B7BA0AB00ECB1C9 /* HydrateUITests */,
+				6FECD2742B7BA0AB00ECB1C9 /* Hydrate Watch App */,
+				6FECD2862B7BA0AC00ECB1C9 /* Hydrate Watch AppTests */,
+				6FECD2902B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FECD24D2B7BA0AA00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD25A2B7BA0AB00ECB1C9 /* Preview Assets.xcassets in Resources */,
+				6FECD2572B7BA0AB00ECB1C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD25D2B7BA0AB00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2672B7BA0AB00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2732B7BA0AB00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD2822B7BA0AC00ECB1C9 /* Preview Assets.xcassets in Resources */,
+				6FECD27F2B7BA0AC00ECB1C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2852B7BA0AC00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD28F2B7BA0AC00ECB1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FECD24B2B7BA0AA00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */,
+				6FECD2532B7BA0AA00ECB1C9 /* HydrateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD25B2B7BA0AB00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD2642B7BA0AB00ECB1C9 /* HydrateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2652B7BA0AB00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD2702B7BA0AB00ECB1C9 /* HydrateUITestsLaunchTests.swift in Sources */,
+				6FECD26E2B7BA0AB00ECB1C9 /* HydrateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2712B7BA0AB00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD27D2B7BA0AB00ECB1C9 /* ContentView.swift in Sources */,
+				6FECD27B2B7BA0AB00ECB1C9 /* HydrateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD2832B7BA0AC00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD28C2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD28D2B7BA0AC00ECB1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FECD2982B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift in Sources */,
+				6FECD2962B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FECD2612B7BA0AB00ECB1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FECD24E2B7BA0AA00ECB1C9 /* Hydrate */;
+			targetProxy = 6FECD2602B7BA0AB00ECB1C9 /* PBXContainerItemProxy */;
+		};
+		6FECD26B2B7BA0AB00ECB1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FECD24E2B7BA0AA00ECB1C9 /* Hydrate */;
+			targetProxy = 6FECD26A2B7BA0AB00ECB1C9 /* PBXContainerItemProxy */;
+		};
+		6FECD2782B7BA0AB00ECB1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FECD2742B7BA0AB00ECB1C9 /* Hydrate Watch App */;
+			targetProxy = 6FECD2772B7BA0AB00ECB1C9 /* PBXContainerItemProxy */;
+		};
+		6FECD2892B7BA0AC00ECB1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FECD2742B7BA0AB00ECB1C9 /* Hydrate Watch App */;
+			targetProxy = 6FECD2882B7BA0AC00ECB1C9 /* PBXContainerItemProxy */;
+		};
+		6FECD2932B7BA0AC00ECB1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FECD2742B7BA0AB00ECB1C9 /* Hydrate Watch App */;
+			targetProxy = 6FECD2922B7BA0AC00ECB1C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6FECD2992B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FECD29A2B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6FECD29C2B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydrate Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hydrate;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.Hydrate;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Hydrate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6FECD29D2B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydrate Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hydrate;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.Hydrate;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Hydrate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		6FECD2A02B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydrate/Preview Content\"";
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hydrate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Hydrate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FECD2A12B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Hydrate/Preview Content\"";
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Hydrate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Hydrate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FECD2A32B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.HydrateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydrate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hydrate";
+			};
+			name = Debug;
+		};
+		6FECD2A42B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.HydrateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydrate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hydrate";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FECD2A62B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.HydrateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hydrate;
+			};
+			name = Debug;
+		};
+		6FECD2A72B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.HydrateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hydrate;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FECD2A92B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Hydrate-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydrate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hydrate Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6FECD2AA2B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Hydrate-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hydrate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hydrate Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		6FECD2AC2B7BA0AC00ECB1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Hydrate-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Hydrate Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		6FECD2AD2B7BA0AC00ECB1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 932HV6TJ62;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.Hydrate-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Hydrate Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FECD24A2B7BA0AA00ECB1C9 /* Build configuration list for PBXProject "Hydrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2992B7BA0AC00ECB1C9 /* Debug */,
+				6FECD29A2B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD29B2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD29C2B7BA0AC00ECB1C9 /* Debug */,
+				6FECD29D2B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD29F2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2A02B7BA0AC00ECB1C9 /* Debug */,
+				6FECD2A12B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD2A22B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "HydrateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2A32B7BA0AC00ECB1C9 /* Debug */,
+				6FECD2A42B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD2A52B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "HydrateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2A62B7BA0AC00ECB1C9 /* Debug */,
+				6FECD2A72B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD2A82B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2A92B7BA0AC00ECB1C9 /* Debug */,
+				6FECD2AA2B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FECD2AB2B7BA0AC00ECB1C9 /* Build configuration list for PBXNativeTarget "Hydrate Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FECD2AC2B7BA0AC00ECB1C9 /* Debug */,
+				6FECD2AD2B7BA0AC00ECB1C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FECD2472B7BA0AA00ECB1C9 /* Project object */;
+}
