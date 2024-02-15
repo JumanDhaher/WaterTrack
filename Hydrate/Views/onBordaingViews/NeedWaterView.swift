@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NeedWaterView: View {
-    @State var cups: String
-    @State var liters: String
+    @State var cups: Double
+    @State var liters: Double
 
     var body: some View {
         ScrollView{
@@ -27,7 +27,7 @@ struct NeedWaterView: View {
                             .frame(width: 120,
                                 height: 120)
                         
-                        Text("\(cups)cups")
+                        Text("\(cups, specifier: "%.2f")cups")
                     }
                     
                     ZStack{
@@ -36,11 +36,11 @@ struct NeedWaterView: View {
                             .frame(width: 120,
                                 height: 120)
                         
-                        Text("\(liters)L")
+                        Text("\(liters, specifier: "%.2f")L")
 
                     }
                 }
-                NavigationLink(destination: NotificationView(), label: {
+                NavigationLink(destination: NotificationView(liters: liters, cups: cups), label: {
                     Text("Set Notification").frame(width: 280,height: 40)
                              .background(.accent)
                              .foregroundColor( .white )
@@ -54,5 +54,5 @@ struct NeedWaterView: View {
 }
 
 #Preview {
-    NeedWaterView(cups: "12", liters: "2.4")
+    NeedWaterView(cups: 12, liters: 2.4)
 }

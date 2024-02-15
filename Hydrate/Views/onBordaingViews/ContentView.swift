@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var weight: Double?
     @State private var readyToNavigate : Bool = false
-    @State private var cups = ""
-    @State private var liters = ""
+    @State private var cups = 0.0
+    @State private var liters = 0.0
     
     var body: some View {
         NavigationStack{
@@ -35,13 +35,13 @@ struct ContentView: View {
                         Button(action: {
                             if(weight != nil && weight != 0){
                                 let dataLiters = ((weight ?? 1) * 0.03)
-                                liters = String(dataLiters.formatted(.number.precision(.fractionLength(2))))
+                                liters = dataLiters
                                 
-                                let dataCups = 4.22675 * dataLiters
+                                let dataCups = dataLiters / 0.24
                     
-                                cups = String(dataCups.formatted(.number.precision(.fractionLength(2))))
+                                cups = dataCups
                                 
-                                if(cups != "" && liters != ""){
+                                if(cups != 0 && liters != 0){
                                     readyToNavigate = true
                                 }
                             }

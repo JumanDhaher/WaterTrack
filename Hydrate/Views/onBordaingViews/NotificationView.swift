@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct NotificationView: View {
-    
+    @State var liters: Double
+    @State var cups: Double
+
     @State var dataTimeInMin = [
         TimeModel(timeNumber: "15", timeHour: "Mins", clickItem : false),
         TimeModel(timeNumber: "30", timeHour: "Mins", clickItem : false),
@@ -106,7 +108,7 @@ struct NotificationView: View {
                 
                 Spacer(minLength: 30)
                 
-                NavigationLink(destination: HomeViews(), label: {
+                NavigationLink(destination: HomeViews(litters: liters, cups: cups), label: {
                     Text("Start").frame(width: 360,height: 40)
                              .background(.accent)
                              .foregroundColor( .white )
@@ -121,7 +123,7 @@ struct NotificationView: View {
 }
 
 #Preview {
-    NotificationView()
+    NotificationView(liters: 2.7, cups: 7)
 }
 
 class TimeModel{
