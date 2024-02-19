@@ -10,115 +10,44 @@ import SwiftUI
 struct NotificationView: View {
     @State var liters: Double
     @State var cups: Double
-
-    @State var dataTimeInMin = [
-        TimeModel(timeNumber: "15", timeHour: "Mins", clickItem : false),
-        TimeModel(timeNumber: "30", timeHour: "Mins", clickItem : false),
-        TimeModel(timeNumber: "60", timeHour: "Mins", clickItem : false),
-        TimeModel(timeNumber: "90", timeHour: "Mins", clickItem : false),
-    ]
     
-
-    @State var dataTimeInHours = [
-        TimeModel(timeNumber: "2", timeHour: "Hours", clickItem : false),
-        TimeModel(timeNumber: "3", timeHour: "Hours", clickItem : false),
-        TimeModel(timeNumber: "4", timeHour: "Hours", clickItem : false),
-        TimeModel(timeNumber: "5", timeHour: "Hours", clickItem : false)
-    ]
+    @State var startHour = Date()
+    @State var endHour = Date()
+    
+    let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 12), count: 4)
+    
+    @State var selectedInterval: String = ""
+    @State var navigateToProgressTrack = false
+    
+    let intervals = [("15", "Mins"), ("30", "Mins"),("60", "Mins"), ("90", "Mins"),("2", "Hours"), ("3", "Hours"),("4", "Hours"), ("5", "Hours")]
+    
     
     var body: some View {
-        ScrollView{
-            VStack(alignment:.leading,spacing: 10) {
-                Text("The start and end hour")
-                    .font(.title2).fontWeight(.bold)
-                
-                Text("Specify the start and end date to receive the notification").foregroundColor(.gray).font(.footnote).multilineTextAlignment(.leading)
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20 )
-                        .foregroundColor(.gray.opacity(0.1))
-                        .frame(width: 360,
-                            height: 100)
-                    VStack(alignment: .leading){
-                        
-                        Text("Start hour")
-                        Divider().padding(.horizontal,10)
-                        Text("End hour")
-                    }.padding(.horizontal)
-                }
-                
-                Spacer(minLength: 30)
-                
-                Text("Notification interval")
-                    .font(.title2).fontWeight(.bold)
-                
-                Text("How often would you like to recive notification within the\nspecified time interval").foregroundColor(.gray).font(.footnote).multilineTextAlignment(.leading)
-                
-                HStack{
-                    ForEach(0..<4) { index in
-                        Button(action: {
-                            self.dataTimeInMin[index] =  TimeModel(timeNumber: dataTimeInMin[index].timeNumber, timeHour: dataTimeInMin[index].timeHour, clickItem: !dataTimeInMin[index].clickItem)
-                            
-                        }, label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 8 )
-                                    .foregroundColor(dataTimeInMin[index].clickItem ? Color(.accent) : .gray.opacity(0.1))
-                                    .frame(width: 80,
-                                        height: 80)
-                                VStack(spacing: 10){
-
-                                    Text(dataTimeInMin[index].timeNumber)
-                                        .foregroundColor(dataTimeInMin[index].clickItem ? .white :.accent)
-                                            .fontWeight(.bold)
-                                  
-                                    Text(dataTimeInMin[index].timeHour)
-                                        .foregroundColor(dataTimeInMin[index].clickItem ? .white : Color("textColor"))
-                                }
-                            }
-                        })
-
-                }
-                }
-                
-                HStack{
-                    ForEach(0..<4) { index in
-                        Button(action: {
-                            self.dataTimeInHours[index] =  TimeModel(timeNumber: dataTimeInHours[index].timeNumber, timeHour: dataTimeInHours[index].timeHour, clickItem: !dataTimeInHours[index].clickItem)
-                            
-                        }, label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 8 )
-                                    .foregroundColor(dataTimeInHours[index].clickItem ? Color(.accent) : .gray.opacity(0.1))
-                                    .frame(width: 80,
-                                        height: 80)
-                                VStack(spacing: 10){
-
-                                    Text(dataTimeInHours[index].timeNumber)
-                                        .foregroundColor(dataTimeInHours[index].clickItem ? .white :.accent)
-                                            .fontWeight(.bold)
-                                  
-                                    Text(dataTimeInHours[index].timeHour)
-                                        .foregroundColor(dataTimeInHours[index].clickItem ? .white : Color("textColor"))
-                                }
-                            }
-                        })
-
-                }
-                }
-                
-                Spacer(minLength: 30)
-                
-               NavigationLink(destination: LiterView(), label: {
-                    Text("Start").frame(width: 360,height: 40)
-                             .background(.accent)
-                             .foregroundColor( .white )
-                             .cornerRadius(8)
-                })
-                
-            }.padding(.top, 50)
-                .padding()
-
-        }.navigationTitle("Notification Preferences")
+        VStack(alignment: .leading) {
+            Text("Notification Preferences")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            Text("The start and End hour")
+                .font(.headline)
+                .fontWeight(.regular)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top)
+            
+            Text("Specify the start and end date to receive the notifications")
+                .font(.footnote)
+                .padding(.bottom, 20)
+                .foregroundColor(.gray)
+            
+            DatePickerView(startHour: $startHour, endHour: $endHour)
+            
+            NotificationIntervalView(
+                liters: liters, cups: cups,
+                selectedInterval: $selectedInterval, navigateToProgressTrack: $navigateToProgressTrack, intervals: intervals, columns: columns
+            )
+        }
+        .padding(.horizontal, 15.0)
+        .navigationTitle("Notification Preferences")
     }
 }
 
@@ -126,17 +55,122 @@ struct NotificationView: View {
     NotificationView(liters: 2.7, cups: 7)
 }
 
-class TimeModel{
-    var timeNumber : String
-    var timeHour : String
-    @State var clickItem : Bool
+struct DatePickerView: View {
+    @Binding var startHour: Date
+    @Binding var endHour: Date
     
-    init(timeNumber: String, timeHour: String, clickItem: Bool) {
-        self.timeNumber = timeNumber
-        self.timeHour = timeHour
-        self.clickItem = clickItem
+    var body: some View {
+        ZStack(alignment: .leading) {
+            Rectangle()
+                .cornerRadius(10)
+                .foregroundColor(Color.lightherGrey)
+                .frame(height: 150)
+            VStack{
+                DatePicker("Start hour", selection: $startHour, displayedComponents: .hourAndMinute)  .padding(.trailing, 140)
+                Divider().padding(.vertical)
+                DatePicker("End hour", selection: $endHour, displayedComponents: .hourAndMinute)
+                    .padding(.trailing, 140.0)
+
+            }.padding(.horizontal)
+        }
     }
 }
+
+struct NotificationIntervalView: View {
+    @State var liters: Double
+    @State var cups: Double
+    @Binding var selectedInterval: String
+    @Binding var navigateToProgressTrack: Bool
+    @State private var readyToNavigate : Bool = false
+
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    @AppStorage("liters") var litersData: Double?
+    @AppStorage("cups") var cupsData: Double?
+
+    var intervals: [(String, String)]
+    let columns: [GridItem]
+    
+    
+    var body: some View {
+        VStack{
+            Text("Notification interval ")
+                .font(.headline)
+                .fontWeight(.regular)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top)
+            
+            Text("How often would you like to receive notifications within the specified time interval")
+                .font(.footnote)
+                .padding(.bottom, 20)
+                .foregroundColor(.gray)
+            
+        }
+        LazyVGrid(columns: columns, spacing: 10) {
+            ForEach(intervals, id: \.0) { interval in
+                IntervalButton(interval: interval, selectedInterval: $selectedInterval)
+            }
+        }
+        Button(action: {
+
+        }) {
+           
+        }
+        .padding(.top, 20)
+        .padding([.leading, .trailing])
+        
+        Button(action: {
+            navigateToProgressTrack = true
+            isOnboarding = false
+            litersData = liters
+            cupsData = cups
+            
+            readyToNavigate = true
+
+        }, label: {
+            Text("Start")
+                .frame(width: 360,height: 55)
+                    .frame(width: 358,height: 55)
+                    .background(.accent)
+                    .foregroundColor( .white )
+                    .cornerRadius(12)
+        })
+        .navigationDestination(isPresented: $readyToNavigate) {
+            HomeViews(liters: liters, cups: cups)
+        }
+        
+    }
+}
+
+struct IntervalButton: View {
+    var interval: (String, String)
+    @Environment(\.colorScheme) var colorScheme
+    
+    @Binding var selectedInterval: String
+    
+    var body: some View {
+        Button(action: {
+            self.selectedInterval = interval.0
+        }) {
+            VStack {
+                Text(interval.0)
+                    .font(.system(size: 22))
+                    .foregroundColor(selectedInterval == interval.0 ? Color("ColorToClick") : Color("AccentColor"))
+                    .fontWeight(.bold)
+                
+                Text(interval.1)
+                    .foregroundColor(selectedInterval == interval.0 ? (colorScheme == .dark ? .black : .white) : (colorScheme == .dark ? .white : .black))
+                
+                    .font(.system(size: 13))
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 80)
+            .background(selectedInterval == interval.0 ? Color("AccentColor") : Color("LightherGrey"))
+            .cornerRadius(10)
+        }
+        
+    }
+}
+
+
 
 
 
