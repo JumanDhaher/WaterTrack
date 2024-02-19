@@ -8,68 +8,42 @@
 import SwiftUI
 
 struct LiterView: View {
+    @State var liters: Double
+
     @State private var stepperValue: Double = 0.0
-    @State private var currentPage = 0
-
+    
+    
     var body: some View {
-        TabView(selection: $currentPage) {
-            VStack {
-                Text("Today's Water Intake")
-                    .font(.callout)
-                    .foregroundColor(Color(.darkGrey))
-                    .padding(.trailing, 180.0)
-
-                Text("\(stepperValue, specifier: "%.1f") liter / 2.7 liters")
+        VStack {
+            Text("Today's Water Intake")
+                .font(.callout)
+                .foregroundColor(Color(.darkGrey))
+                .padding(.trailing, 180.0)
+            
+            Text("\(stepperValue, specifier: "%.1f") Liter / \(liters, specifier: "%.1f") liters")
+                .font(.title)
+                .foregroundColor(Color(.black1))
+                .fontWeight(.bold)
+                .padding(.trailing, 109.0)
+            
+            CircleProgressBar(value: $stepperValue,liters: liters)
+                .frame(width: 300, height: 300)
+                .padding(.top, 73.0)
+            
+            CustomStepper(value: $stepperValue, in: 0...liters, step: 0.1) {
+                Text(" \(stepperValue, specifier: "%.1f")")
                     .font(.title)
-                    .foregroundColor(Color(.black1))
                     .fontWeight(.bold)
-                    .padding(.trailing, 109.0)
-
-                CircleProgressBar(value: $stepperValue)
-                    .frame(width: 300, height: 300)
-                    .padding(.top, 73.0)
-
-                CustomStepper(value: $stepperValue, in: 0...2.7, step: 0.1) {
-                    Text(" \(stepperValue, specifier: "%.1f")")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(60)
-                }
+                    .padding(60)
             }
-            .tabItem {
-                Text("Tab 1")
-            }
-            .tag(0)
-
-            // Your second tab content here
-           SecondTab(cups: 12)
-                .tag(1)
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .environment(\.colorScheme, UIApplication.shared.windows.first?.rootViewController?.traitCollection.userInterfaceStyle == .dark ? .dark : .light)
-        .overlay(
-                   VStack {
-                       HStack(spacing: 8) {
-                           ForEach(0..<2) { index in
-                               Circle()
-                                   .frame(width: 8, height: 8)
-                                   .foregroundColor(index == currentPage ? Color(.darkBlue) : Color.gray.opacity(0.6))
-                           }
-                       }
-                       .padding([.top, .leading, .trailing], 700.0)
-
-                       Text("Swipe right for cups calculating")
-                         .font(.caption2)
-                         .fontWeight(.regular)
-                         .foregroundColor(Color(.darkGrey))
-                           .padding(.bottom, 10)
-                   }
-               )
-           }
-       }
+    }
+}
 
 struct CircleProgressBar: View {
+    
     @Binding var value: Double
+    @State var liters: Double
 
     var body: some View {
         ZStack {
@@ -79,7 +53,7 @@ struct CircleProgressBar: View {
                 .opacity(0.3)
 
             Circle()
-                .trim(from: 0.0, to: value / 2.7)
+                .trim(from: 0.0, to: value / liters)
                 .stroke(style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color(.darkBlue))
                 .rotationEffect(Angle(degrees: -90))
@@ -97,7 +71,7 @@ struct CircleProgressBar: View {
             Emoji(text: "😍", appearTime: 1.9, disappearTime: 2.0, progressValue: $value)
                 .offset(x: -148, y: 30)
 
-            Emoji(text: "🥳", appearTime: 2.7, disappearTime: 2.7, progressValue: $value)
+            Emoji(text: "🥳", appearTime: liters, disappearTime: liters, progressValue: $value)
                 .offset(x: 0, y: 0)
         }
 
@@ -174,6 +148,6 @@ struct CustomStepper<Label>: View where Label: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LiterView()
+        LiterView(liters: 2.5)
     }
 }
