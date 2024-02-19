@@ -160,7 +160,6 @@
 			children = (
 				6F7E2BBC2B7CC445001C981F /* LiterView.swift */,
 				6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */,
-				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
 			);
 			path = homeViews;
 			sourceTree = "<group>";
@@ -252,6 +251,7 @@
 			children = (
 				6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */,
 				6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */,
+				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
 				6FECD2802B7BA0AC00ECB1C9 /* Preview Content */,
 			);
 			path = "Hydrate Watch App";
