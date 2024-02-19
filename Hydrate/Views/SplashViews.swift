@@ -15,7 +15,6 @@ struct SplashViews: View {
         ZStack {
             if self.isActive {
                ContentView()
-                
             } else {
         
                 VStack{

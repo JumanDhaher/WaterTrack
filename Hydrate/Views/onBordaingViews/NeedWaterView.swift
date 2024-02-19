@@ -26,8 +26,10 @@ struct NeedWaterView: View {
                             .foregroundColor(.gray.opacity(0.2))
                             .frame(width: 120,
                                 height: 120)
-                        
-                        Text("\(cups, specifier: "%.2f")cups")
+                        VStack{
+                            Image("CupImage")
+                            Text("\(cups, specifier: "%.2f")cups")
+                        }
                     }
                     
                     ZStack{
@@ -35,16 +37,20 @@ struct NeedWaterView: View {
                             .foregroundColor(.gray.opacity(0.2))
                             .frame(width: 120,
                                 height: 120)
-                        
-                        Text("\(liters, specifier: "%.2f")L")
+                        VStack{
+                            Image("LiterImage")
+                            Text("\(liters, specifier: "%.2f")L")
+                        }
 
                     }
                 }
                 NavigationLink(destination: NotificationView(liters: liters, cups: cups), label: {
-                    Text("Set Notification").frame(width: 280,height: 40)
-                             .background(.accent)
-                             .foregroundColor( .white )
-                             .cornerRadius(8)
+                    Text("Set Notification")  
+                        .frame(width: 358,height: 55)
+                        .background(.accent)
+                        .foregroundColor( .white )
+                        .cornerRadius(12)
+                        .padding(.bottom, 30)
                 })
                 
                 

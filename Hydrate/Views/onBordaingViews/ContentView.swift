@@ -15,20 +15,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            ScrollView{
-                VStack(alignment:.leading,spacing: 20) {
-                    imageTitle
-                    
-                    Text("IHydrate").font(.title2).fontWeight(.bold)
+                VStack(alignment:.leading) {
                     
                     sectionTitle
                     
-                    Spacer(minLength: 20)
                     
-                    textField
+                    textField.padding(.top,30)
                     
-                    Spacer(minLength: 30)
-                    
+                    Spacer()
+
                     if(weight == nil){
                         notCalculateButton
                     }else{
@@ -55,7 +50,6 @@ struct ContentView: View {
                     
                 }.padding(.top, 50)
             }
-        }
     }
 }
 
@@ -66,51 +60,59 @@ struct ContentView: View {
 
 extension ContentView{
     
-    private var imageTitle: some View {
-        Image("waterImage")
-           .resizable()
-           .frame(width: 40, height: 40)
-           .colorMultiply(Color("AccentColor"))
-    }
     
     private var sectionTitle: some View {
-        Text("Start with IHydtaye to record and track your\nwater intake daily based on your needs and\nstay hydrated").foregroundColor(.gray).font(.footnote).multilineTextAlignment(.leading)
+        VStack(alignment: .leading, spacing: 10){
+            Image("splash_logo")
+            Text("iHydrate")
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+            
+            Text("Start with IHydtaye to record and track your\nwater intake daily based on your needs and\nstay hydrated")  
+                .font(.body)
+                .foregroundColor(Color.gray)
+                .padding(.horizontal)
+
+        }
     }
     
     private var textField: some View {
-        LabeledContent {
-            LabeledContent{
-                Text("Kg")
-                    .foregroundColor(Color("textColor"))
-            }label: {
-                TextField("weight",value: $weight, format: .number)
-            }
-             
-        } label: {
-          Text("Body Weight")
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(.gray.opacity(0.2))
+                .frame(width: 358, height: 44)
+                HStack{
+                    Text("Body Weight")
+
+                    TextField("weight",value: $weight, format: .number).textFieldStyle(.plain)
+                        .foregroundColor(Color.gray).frame(width: 55)
+                    
+                    Text("Kg")
+                        .foregroundColor(Color("textColor"))
+                }
+                
+            .frame(width: 320, height: 24,alignment: .leading)
         }
-        .padding()
-            .frame(width: 280, height: 35)
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(.gray.opacity(0.3), lineWidth: 1))
-            .frame(width: 280, height: 24)
-        }
+    }
     
     private var notCalculateButton: some View {
-       Text("Calculate Now").frame(width: 280,height: 40)
-            .background(Color(.gray))
+        Text("Calculate Now")  .frame(width: 358, height: 55.0)
+            .background(Color("unclickButton"))
                 .foregroundColor( .black.opacity(0.4) )
-                .cornerRadius(8)
+                .cornerRadius(12)
+                .padding(.bottom, 30)
 }
     
     
     
        private var calculateButton: some View {
-          Text("Calculate Now").frame(width: 280,height: 40)
+          Text("Calculate Now")
+               .frame(width: 358,height: 55)
                    .background(.accent)
                    .foregroundColor( .white )
-                   .cornerRadius(8)
+                   .cornerRadius(12)
+                   .padding(.bottom, 30)
    }
     
 }
