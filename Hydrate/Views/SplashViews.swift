@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct SplashViews: View {
+    @Binding var isOnboarding: Bool
     @State private var isActive = false
     @State private var size = 0.3
     @State private var opacity = 0.3
+    
+    @AppStorage("liters") var litersData: Double?
+    @AppStorage("cups") var cupsData: Double?
+    
     var body: some View {
         ZStack {
             if self.isActive {
-               ContentView()
+                if isOnboarding {
+                    ContentView()
+               }else{
+                   if(litersData == 0.0 && cupsData == 0.0){
+                       ContentView()
+                   }
+                   else{
+                       HomeViews(liters: litersData ?? 0.0 , cups: litersData ?? 0.0 )
+                   }
+                }
             } else {
         
                 VStack{
-                    Image("waterImage")
+                    Image("splash_logo")
                         .resizable()
                         .frame(width: 60, height: 60)
                         .scaleEffect(size)
@@ -42,8 +56,4 @@ struct SplashViews: View {
         
     }
     }
-}
-
-#Preview {
-    SplashViews()
 }
