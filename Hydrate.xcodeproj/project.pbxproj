@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F1EB7D72B7E0C9000F38CD1 /* FirstTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EB7D62B7E0C9000F38CD1 /* FirstTab.swift */; };
 		6F1EB7D92B7E0CA100F38CD1 /* SecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */; };
 		6F7E2BB72B7CAD6A001C981F /* NeedWaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BB62B7CAD6A001C981F /* NeedWaterView.swift */; };
 		6F7E2BB92B7CB4F3001C981F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BB82B7CB4F3001C981F /* NotificationView.swift */; };
-		6F7E2BBD2B7CC445001C981F /* HomeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBC2B7CC445001C981F /* HomeViews.swift */; };
+		6F7E2BBD2B7CC445001C981F /* LiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBC2B7CC445001C981F /* LiterView.swift */; };
 		6F7E2BBF2B7CC452001C981F /* SplashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBE2B7CC452001C981F /* SplashViews.swift */; };
 		6FECD2532B7BA0AA00ECB1C9 /* HydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */; };
 		6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */; };
@@ -83,11 +82,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6F1EB7D62B7E0C9000F38CD1 /* FirstTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTab.swift; sourceTree = "<group>"; };
 		6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTab.swift; sourceTree = "<group>"; };
 		6F7E2BB62B7CAD6A001C981F /* NeedWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedWaterView.swift; sourceTree = "<group>"; };
 		6F7E2BB82B7CB4F3001C981F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		6F7E2BBC2B7CC445001C981F /* HomeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViews.swift; sourceTree = "<group>"; };
+		6F7E2BBC2B7CC445001C981F /* LiterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiterView.swift; sourceTree = "<group>"; };
 		6F7E2BBE2B7CC452001C981F /* SplashViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViews.swift; sourceTree = "<group>"; };
 		6FECD24F2B7BA0AA00ECB1C9 /* Hydrate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydrate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateApp.swift; sourceTree = "<group>"; };
@@ -160,9 +158,9 @@
 		6F1EB7D52B7E0C7D00F38CD1 /* homeViews */ = {
 			isa = PBXGroup;
 			children = (
-				6F7E2BBC2B7CC445001C981F /* HomeViews.swift */,
-				6F1EB7D62B7E0C9000F38CD1 /* FirstTab.swift */,
+				6F7E2BBC2B7CC445001C981F /* LiterView.swift */,
 				6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */,
+				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
 			);
 			path = homeViews;
 			sourceTree = "<group>";
@@ -254,7 +252,6 @@
 			children = (
 				6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */,
 				6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */,
-				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
 				6FECD2802B7BA0AC00ECB1C9 /* Preview Content */,
 			);
 			path = "Hydrate Watch App";
@@ -508,8 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */,
-				6F1EB7D72B7E0C9000F38CD1 /* FirstTab.swift in Sources */,
-				6F7E2BBD2B7CC445001C981F /* HomeViews.swift in Sources */,
+				6F7E2BBD2B7CC445001C981F /* LiterView.swift in Sources */,
 				6F7E2BB72B7CAD6A001C981F /* NeedWaterView.swift in Sources */,
 				6F7E2BBF2B7CC452001C981F /* SplashViews.swift in Sources */,
 				6F1EB7D92B7E0CA100F38CD1 /* SecondTab.swift in Sources */,

@@ -108,7 +108,7 @@ struct NotificationView: View {
                 
                 Spacer(minLength: 30)
                 
-                NavigationLink(destination: HomeViews(litters: liters, cups: cups), label: {
+               NavigationLink(destination: LiterView(), label: {
                     Text("Start").frame(width: 360,height: 40)
                              .background(.accent)
                              .foregroundColor( .white )
