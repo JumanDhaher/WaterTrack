@@ -83,13 +83,21 @@ extension ContentView{
                 .foregroundColor(.gray.opacity(0.2))
                 .frame(width: 358, height: 44)
                 HStack{
-                    Text("Body Weight")
+                    LabeledContent {
+                        LabeledContent{
+                            Text("Kg")
+                                .foregroundColor(Color("textColor")).padding(.trailing,132)
+                           
+                        }
+                    label: {
+                        TextField("weight",value: $weight, format: .number).textFieldStyle(.plain)
+                            .foregroundColor(Color.gray).keyboardType(.numberPad)
+                            .frame(width: 54)
 
-                    TextField("weight",value: $weight, format: .number).textFieldStyle(.plain)
-                        .foregroundColor(Color.gray).frame(width: 55)
-                    
-                    Text("Kg")
-                        .foregroundColor(Color("textColor"))
+                    }
+                    } label: {
+                        Text("Body Weight")
+                    }
                 }
                 
             .frame(width: 320, height: 24,alignment: .leading)
@@ -99,7 +107,7 @@ extension ContentView{
     private var notCalculateButton: some View {
         Text("Calculate Now")  .frame(width: 358, height: 55.0)
             .background(Color("unclickButton"))
-                .foregroundColor( .black.opacity(0.4) )
+            .foregroundColor(Color.darkGrey)
                 .cornerRadius(12)
                 .padding(.bottom, 30)
 }

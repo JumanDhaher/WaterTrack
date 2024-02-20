@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct NotificationView: View {
     @State var liters: Double
@@ -27,7 +28,7 @@ struct NotificationView: View {
             Text("Notification Preferences")
                 .font(.title2)
                 .fontWeight(.bold)
-            
+
             Text("The start and End hour")
                 .font(.headline)
                 .fontWeight(.regular)
@@ -48,6 +49,16 @@ struct NotificationView: View {
         }
         .padding(.horizontal, 15.0)
         .navigationTitle("Notification Preferences")
+        .onAppear(){
+                   // 1 checking for permission
+                   UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                       if success {
+                           print("Permission approved!")
+                       } else if let error = error {
+                           print(error.localizedDescription)
+                       }
+                   }
+        }
     }
 }
 
@@ -110,30 +121,42 @@ struct NotificationIntervalView: View {
                 IntervalButton(interval: interval, selectedInterval: $selectedInterval)
             }
         }
-        Button(action: {
-
-        }) {
-           
-        }
-        .padding(.top, 20)
-        .padding([.leading, .trailing])
-        
+     
         Button(action: {
             navigateToProgressTrack = true
             isOnboarding = false
             litersData = liters
             cupsData = cups
+            print(selectedInterval)
             
-            readyToNavigate = true
+            let content = UNMutableNotificationContent()
+            content.title = "Drink Water"
+            content.subtitle = "Don't forget that!"
+            content.sound = UNNotificationSound.default
+            
+            var datComp = DateComponents()
+            datComp.hour = 10
+            datComp.minute = 36
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+            
+            
+            // choose a random identifier
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            
+            // add our notification request
+            UNUserNotificationCenter.current().add(request)
+
+           readyToNavigate = true
 
         }, label: {
             Text("Start")
-                .frame(width: 360,height: 55)
-                    .frame(width: 358,height: 55)
+                    .frame(width: 370,height: 55)
                     .background(.accent)
                     .foregroundColor( .white )
                     .cornerRadius(12)
         })
+        .padding(.top, 20)
         .navigationDestination(isPresented: $readyToNavigate) {
             HomeViews(liters: liters, cups: cups)
         }
