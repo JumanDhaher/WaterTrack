@@ -63,7 +63,7 @@ struct NeedWaterView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: NotificationView(liters: liters, cups: cups), label: {
+                NavigationLink(destination: NotificationView(liters: liters, cups: Double(cups)), label: {
                     Text("Set Notification")
                         .frame(width: 358,height: 55)
                         .background(.accent)
