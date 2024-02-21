@@ -28,6 +28,8 @@
 		6FECD28C2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD28B2B7BA0AC00ECB1C9 /* Hydrate_Watch_AppTests.swift */; };
 		6FECD2962B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2952B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift */; };
 		6FECD2982B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */; };
+		6FF482BA2B85D03E00F676AC /* WatchConnecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF482B92B85D03E00F676AC /* WatchConnecter.swift */; };
+		6FF482BD2B85D16200F676AC /* WatchToIosConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF482BC2B85D16200F676AC /* WatchToIosConnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		6FECD2912B7BA0AC00ECB1C9 /* Hydrate Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hydrate Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FECD2952B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6FF482B92B85D03E00F676AC /* WatchConnecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnecter.swift; sourceTree = "<group>"; };
+		6FF482BC2B85D16200F676AC /* WatchToIosConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToIosConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,7 @@
 		6FECD2512B7BA0AA00ECB1C9 /* Hydrate */ = {
 			isa = PBXGroup;
 			children = (
+				6FF482B82B85D02800F676AC /* Controller */,
 				6F7E2BBA2B7CC3F4001C981F /* Views */,
 				6FECD2562B7BA0AB00ECB1C9 /* Assets.xcassets */,
 				6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */,
@@ -252,6 +257,7 @@
 		6FECD2792B7BA0AB00ECB1C9 /* Hydrate Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				6FF482BB2B85D14100F676AC /* Controller */,
 				6FECD27A2B7BA0AB00ECB1C9 /* HydrateApp.swift */,
 				6FECD27C2B7BA0AB00ECB1C9 /* ContentView.swift */,
 				6FECD27E2B7BA0AC00ECB1C9 /* Assets.xcassets */,
@@ -283,6 +289,22 @@
 				6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Hydrate Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		6FF482B82B85D02800F676AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FF482B92B85D03E00F676AC /* WatchConnecter.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6FF482BB2B85D14100F676AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FF482BC2B85D16200F676AC /* WatchToIosConnector.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +533,7 @@
 				6FCFF11B2B83449200631D09 /* HomeViews.swift in Sources */,
 				6F7E2BBD2B7CC445001C981F /* LiterView.swift in Sources */,
 				6F7E2BB72B7CAD6A001C981F /* NeedWaterView.swift in Sources */,
+				6FF482BA2B85D03E00F676AC /* WatchConnecter.swift in Sources */,
 				6F7E2BBF2B7CC452001C981F /* SplashViews.swift in Sources */,
 				6F1EB7D92B7E0CA100F38CD1 /* SecondTab.swift in Sources */,
 				6FECD2532B7BA0AA00ECB1C9 /* HydrateApp.swift in Sources */,
@@ -540,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FECD27D2B7BA0AB00ECB1C9 /* ContentView.swift in Sources */,
+				6FF482BD2B85D16200F676AC /* WatchToIosConnector.swift in Sources */,
 				6FECD27B2B7BA0AB00ECB1C9 /* HydrateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
