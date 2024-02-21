@@ -116,10 +116,10 @@ struct CustomStepper: View {
 struct CircleProgressBar: View {
     var progress: CGFloat
     var totalLiters: Double
-
+    
     private var emoji: String {
         let progressPercentage = Int(progress * 100)
-
+        
         switch progressPercentage {
         case 0..<7:
             return "😴"
@@ -129,21 +129,21 @@ struct CircleProgressBar: View {
             return "😁"
         case 70..<80:
             return "😍"
-       case 90..<100:
-               return "🥳"
+        case 90..<100:
+            return "🥳"
         default:
             return ""
-           
+            
         }
     }
-
+    
     var body: some View {
         ZStack {
             Circle()
                 .stroke(lineWidth: 40.0)
                 .opacity(0.3)
                 .foregroundColor(Color(.lightBlue))
-
+            
             Circle()
                 .trim(from: 0.0, to: min(progress, 1.0))
                 .stroke(style: StrokeStyle(lineWidth: 40.0, lineCap: .round, lineJoin: .round))
@@ -154,80 +154,26 @@ struct CircleProgressBar: View {
                 )
         }
     }
-
-<<<<<<< Updated upstream
+    
     private var emojiOverlay: some View {
         GeometryReader { geometry in
             let angle = 360 * progress - 90
             let xPosition: CGFloat
             let yPosition: CGFloat
-
+            
             if progress >= 1.0 {
-               
+                
                 xPosition = geometry.size.width / 2
                 yPosition = geometry.size.height / 2
             } else {
                 
                 xPosition = geometry.size.width / 2 + (geometry.size.width / 2) * cos(angle * .pi / 180)
                 yPosition = geometry.size.height / 2 + (geometry.size.height / 2) * sin(angle * .pi / 180)
-=======
-struct CustomStepper<Label>: View where Label: View {
-    @Binding var value: Double
-    @State private var isFilled = false
-    var `in`: ClosedRange<Double>
-    var step: Double
-    var label: () -> Label
-
-    var body: some View {
-        HStack(spacing: 10) {
-            Button(action: decrease) {
-                Image(systemName: "minus")
-                    .font(.title)
-                    .foregroundColor(Color(.darkBlue))
-                    .padding(20)
-                    .background(Circle()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(Color(.lightherGrey)))
->>>>>>> Stashed changes
             }
-
-<<<<<<< Updated upstream
             return Text(emoji)
                 .font(.system(size: 40))
                 .position(x: xPosition, y: yPosition)
         }
     }
-   
-=======
-            Button(action: increase) {
-                Image(systemName: "plus")
-                    .font(.title2)
-                    .foregroundColor(Color(.darkBlue))
-                    .padding(20)
-                    .background(Circle()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(Color(.lightherGrey)))
-            }
-            .disabled(value >= `in`.upperBound)
-        }
-    }
-
-    private func decrease() {
-        let newValue = max(`in`.lowerBound, value - step)
-        value = newValue
-        isFilled.toggle()
-    }
-
-    private func increase() {
-        let newValue = min(`in`.upperBound, value + step)
-        value = newValue
-        isFilled.toggle()
-    }
->>>>>>> Stashed changes
-            
-
-struct LiterView_Previews: PreviewProvider {
-    static var previews: some View {
-       LiterView(liters: 2.7)
-    }
+    
 }

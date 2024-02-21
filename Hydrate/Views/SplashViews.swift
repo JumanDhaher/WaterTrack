@@ -26,7 +26,7 @@ struct SplashViews: View {
                        ContentView()
                    }
                    else{
-                       HomeViews(liters: litersData ?? 0.0 , cups: litersData ?? 0.0 )
+                       HomeView(liters: litersData ?? 0.0 , cups: litersData ?? 0.0 )
                    }
                 }
             } else {

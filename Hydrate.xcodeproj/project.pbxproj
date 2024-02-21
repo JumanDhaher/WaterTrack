@@ -12,7 +12,6 @@
 		6F7E2BB92B7CB4F3001C981F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BB82B7CB4F3001C981F /* NotificationView.swift */; };
 		6F7E2BBD2B7CC445001C981F /* LiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBC2B7CC445001C981F /* LiterView.swift */; };
 		6F7E2BBF2B7CC452001C981F /* SplashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBE2B7CC452001C981F /* SplashViews.swift */; };
-		6FCFF11B2B83449200631D09 /* HomeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCFF11A2B83449200631D09 /* HomeViews.swift */; };
 		6FECD2532B7BA0AA00ECB1C9 /* HydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */; };
 		6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */; };
 		6FECD2572B7BA0AB00ECB1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FECD2562B7BA0AB00ECB1C9 /* Assets.xcassets */; };
@@ -33,6 +32,7 @@
 		6FF482BE2B85D67E00F676AC /* LiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBC2B7CC445001C981F /* LiterView.swift */; };
 		6FF482BF2B85D6C600F676AC /* SplashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBE2B7CC452001C981F /* SplashViews.swift */; };
 		6FF482C02B85D6DA00F676AC /* SecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */; };
+		6FF482C22B85DF0800F676AC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF482C12B85DF0800F676AC /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,6 @@
 		6F7E2BB82B7CB4F3001C981F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6F7E2BBC2B7CC445001C981F /* LiterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiterView.swift; sourceTree = "<group>"; };
 		6F7E2BBE2B7CC452001C981F /* SplashViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViews.swift; sourceTree = "<group>"; };
-		6FCFF11A2B83449200631D09 /* HomeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViews.swift; sourceTree = "<group>"; };
 		6FECD24F2B7BA0AA00ECB1C9 /* Hydrate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydrate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FECD2522B7BA0AA00ECB1C9 /* HydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateApp.swift; sourceTree = "<group>"; };
 		6FECD2542B7BA0AA00ECB1C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydrate_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6FF482B92B85D03E00F676AC /* WatchConnecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnecter.swift; sourceTree = "<group>"; };
 		6FF482BC2B85D16200F676AC /* WatchToIosConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToIosConnector.swift; sourceTree = "<group>"; };
+		6FF482C12B85DF0800F676AC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +169,7 @@
 			children = (
 				6F7E2BBC2B7CC445001C981F /* LiterView.swift */,
 				6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */,
-				6FCFF11A2B83449200631D09 /* HomeViews.swift */,
+				6FF482C12B85DF0800F676AC /* HomeView.swift */,
 			);
 			path = homeViews;
 			sourceTree = "<group>";
@@ -533,8 +533,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FECD2552B7BA0AA00ECB1C9 /* ContentView.swift in Sources */,
-				6FCFF11B2B83449200631D09 /* HomeViews.swift in Sources */,
 				6F7E2BBD2B7CC445001C981F /* LiterView.swift in Sources */,
+				6FF482C22B85DF0800F676AC /* HomeView.swift in Sources */,
 				6F7E2BB72B7CAD6A001C981F /* NeedWaterView.swift in Sources */,
 				6FF482BA2B85D03E00F676AC /* WatchConnecter.swift in Sources */,
 				6F7E2BBF2B7CC452001C981F /* SplashViews.swift in Sources */,
