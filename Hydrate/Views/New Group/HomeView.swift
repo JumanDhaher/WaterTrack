@@ -23,7 +23,7 @@ struct HomeView: View {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
 
-        .environment(\.colorScheme, UIApplication.shared.windows.first?.rootViewController?.traitCollection.userInterfaceStyle == .dark ? .dark : .light)
+//        .environment(\.colorScheme, UIApplication.shared.windows.first?.rootViewController?.traitCollection.userInterfaceStyle == .dark ? .dark : .light)
         .navigationBarBackButtonHidden()
         .overlay(
             VStack {

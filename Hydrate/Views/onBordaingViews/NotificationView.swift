@@ -159,7 +159,7 @@ struct NotificationIntervalView: View {
         })
         .padding(.top, 20)
         .navigationDestination(isPresented: $readyToNavigate) {
-            HomeViews(liters: liters, cups: cups)
+            HomeView(liters: liters, cups: cups)
         }
         
     }
