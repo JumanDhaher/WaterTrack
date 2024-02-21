@@ -10,6 +10,7 @@ import UserNotifications
 
 struct NotificationView: View {
     @State var liters: Double
+//    should be a Int
     @State var cups: Double
     
     @State var startHour = Date()
@@ -43,7 +44,7 @@ struct NotificationView: View {
             DatePickerView(startHour: $startHour, endHour: $endHour)
             
             NotificationIntervalView(
-                liters: liters, cups: cups,
+                liters: liters, cups: Double((cups)),
                 selectedInterval: $selectedInterval, navigateToProgressTrack: $navigateToProgressTrack, intervals: intervals, columns: columns
             )
         }
