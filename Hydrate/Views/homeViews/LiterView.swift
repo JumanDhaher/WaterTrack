@@ -8,146 +8,175 @@
 import SwiftUI
 
 struct LiterView: View {
-    @State var liters: Double
+   @State var liters: Double
+   @State private var totalliters: Double = 0.0
+    @State private var incrementValue: Double = 0.10
+ 
 
-    @State private var stepperValue: Double = 0.0
-    
-    
     var body: some View {
         VStack {
-            Text("Today's Water Intake")
+            
+           Text("Today's Water Intake")
                 .font(.callout)
                 .foregroundColor(Color(.darkGrey))
-                .padding(.trailing, 180.0)
-            
-            Text("\(stepperValue, specifier: "%.1f") Liter / \(liters, specifier: "%.1f") liters")
-                .font(.title)
-                .foregroundColor(Color(.black1))
-                .fontWeight(.bold)
-                .padding(.trailing, 109.0)
-            
-            CircleProgressBar(value: $stepperValue,liters: liters)
+                .padding(.trailing,180)
+           
+           Text(String(format: "%.2f / %.2f Liters", totalliters, liters))
+              .font(.title)
+              .foregroundColor(Color(.black1))
+              .fontWeight(.bold)
+              .padding(.trailing,109)
+
+            CircleProgressBar(progress: CGFloat(totalliters / liters), totalLiters: liters)
                 .frame(width: 300, height: 300)
-                .padding(.top, 73.0)
-            
-            CustomStepper(value: $stepperValue, in: 0...liters, step: 0.1) {
-                Text(" \(stepperValue, specifier: "%.1f")")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(60)
+                .padding(.top, 50.0)
+                .foregroundColor(Color(.darkBlue))
+
+           
+           
+
+            CustomStepper(
+               value: $totalliters,
+                range: 0...liters,
+                step: incrementValue,
+                onIncrement: { addWater(amount: incrementValue) },
+                onDecrement: { subtractWater(amount: incrementValue) }
+            )
+        }
+    }
+
+    private func addWater(amount: Double) {
+        withAnimation {
+            totalliters += amount
+        }
+    }
+
+    private func subtractWater(amount: Double) {
+        withAnimation {
+            totalliters -= amount
+            if totalliters < 0 {
+                totalliters = 0
             }
         }
     }
 }
+ 
+struct CustomStepper: View {
+   @Binding var value: Double
+   var range: ClosedRange<Double>
+   var step: Double
+   var onIncrement: () -> Void
+   var onDecrement: () -> Void
+
+   var body: some View {
+       HStack(spacing: 10) {
+           Button(action: {
+               // Function to subtract water
+               onDecrement()
+           }) {
+               Circle()
+                   .frame(width: 50, height: 50)
+                   .foregroundColor(Color(.lightherGrey))
+                   .overlay(
+                       Image(systemName: "minus")
+                           .font(.title)
+                           .foregroundColor(.darkBlue)
+                   )
+           }
+           .disabled(value <= range.lowerBound)
+
+           Text(" \(value, specifier: "%.1f")")
+               .font(.title)
+               .fontWeight(.bold)
+               .padding(60)
+
+           Button(action: {
+               // Function to add water
+               onIncrement()
+           }) {
+               Circle()
+                   .frame(width: 50, height: 50)
+                   .foregroundColor(Color(.lightherGrey))
+                   .overlay(
+                       Image(systemName: "plus")
+                           .font(.title)
+                           .foregroundColor(.darkBlue)
+                   )
+           }
+           .disabled(value >= range.upperBound)
+       }
+   }
+}
+
 
 struct CircleProgressBar: View {
-    
-    @Binding var value: Double
-    @State var liters: Double
+    var progress: CGFloat
+    var totalLiters: Double
+
+    private var emoji: String {
+        let progressPercentage = Int(progress * 100)
+
+        switch progressPercentage {
+        case 0..<7:
+            return "😴"
+        case 15..<20:
+            return "😃"
+        case 30..<50:
+            return "😁"
+        case 70..<80:
+            return "😍"
+       case 90..<100:
+               return "🥳"
+        default:
+            return ""
+           
+        }
+    }
 
     var body: some View {
         ZStack {
             Circle()
-                .stroke(lineWidth: 40)
-                .foregroundColor(Color(.lightBlue))
+                .stroke(lineWidth: 40.0)
                 .opacity(0.3)
+                .foregroundColor(Color(.lightBlue))
 
             Circle()
-                .trim(from: 0.0, to: value / liters)
-                .stroke(style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
-                .foregroundColor(Color(.darkBlue))
-                .rotationEffect(Angle(degrees: -90))
-                .animation(.easeInOut(duration: 0.1))
-
-            Emoji(text: "😴", appearTime: 0.1, disappearTime: 0.1, progressValue: $value)
-                .offset(x: 0, y: -149)
-
-            Emoji(text: "😃", appearTime: 0.7, disappearTime: 0.7, progressValue: $value)
-                .offset(x: 150, y: 10)
-
-            Emoji(text: "😁", appearTime: 1.3, disappearTime: 1.3, progressValue: $value)
-                .offset(x: 0, y: 149)
-
-            Emoji(text: "😍", appearTime: 1.9, disappearTime: 2.0, progressValue: $value)
-                .offset(x: -148, y: 30)
-
-            Emoji(text: "🥳", appearTime: liters, disappearTime: liters, progressValue: $value)
-                .offset(x: 0, y: 0)
-        }
-
-    }
-
-}
-
-struct Emoji: View {
-    var text: String
-    var appearTime: Double
-    var disappearTime: Double
-    @Binding var progressValue: Double
-
-    @State private var isVisible: Bool = false
-
-    var body: some View {
-        Text(text)
-            .font(.system(size: 40))
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + appearTime) {
-                    isVisible = true
-                }
-            }
-            .onDisappear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + disappearTime) {
-                    isVisible = false
-                }
-            }
-            .opacity(isVisible && progressValue >= appearTime && progressValue <= disappearTime ? 1 : 0)
-            .animation(.easeIn(duration: 0.2))
-    }
-}
-
-struct CustomStepper<Label>: View where Label: View {
-    @Binding var value: Double
-    var `in`: ClosedRange<Double>
-    var step: Double
-    var label: () -> Label
-
-    var body: some View {
-        HStack(spacing: 10) {
-            Button(action: decrease) {
-                Image(systemName: "minus")
-                    .font(.title)
-                    .foregroundColor(Color(.darkBlue))
-                    .padding(20)
-                    .background(Circle().frame(width: 50, height: 50).foregroundColor(Color(.lightherGrey)))
-            }
-            .disabled(value <= `in`.lowerBound)
-
-            label()
-
-            Button(action: increase) {
-                Image(systemName: "plus")
-                    .font(.title2)
-                    .foregroundColor(Color(.darkBlue))
-                    .padding(20)
-                    .background(Circle().frame(width: 50, height: 50).foregroundColor(Color(.lightherGrey)))
-            }
-            .disabled(value >= `in`.upperBound)
+                .trim(from: 0.0, to: min(progress, 1.0))
+                .stroke(style: StrokeStyle(lineWidth: 40.0, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.darkBlue)
+                .rotationEffect(Angle(degrees: 270.0))
+                .overlay(
+                    emojiOverlay
+                )
         }
     }
 
-    private func decrease() {
-        let newValue = max(`in`.lowerBound, value - step)
-        value = newValue
-    }
+    private var emojiOverlay: some View {
+        GeometryReader { geometry in
+            let angle = 360 * progress - 90
+            let xPosition: CGFloat
+            let yPosition: CGFloat
 
-    private func increase() {
-        let newValue = min(`in`.upperBound, value + step)
-        value = newValue
+            if progress >= 1.0 {
+               
+                xPosition = geometry.size.width / 2
+                yPosition = geometry.size.height / 2
+            } else {
+                
+                xPosition = geometry.size.width / 2 + (geometry.size.width / 2) * cos(angle * .pi / 180)
+                yPosition = geometry.size.height / 2 + (geometry.size.height / 2) * sin(angle * .pi / 180)
+            }
+
+            return Text(emoji)
+                .font(.system(size: 40))
+                .position(x: xPosition, y: yPosition)
+        }
     }
+   
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LiterView_Previews: PreviewProvider {
     static var previews: some View {
-        LiterView(liters: 2.5)
+       LiterView(liters: 2.7)
     }
 }

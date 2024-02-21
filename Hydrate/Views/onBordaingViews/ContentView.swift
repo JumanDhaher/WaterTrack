@@ -30,7 +30,7 @@ struct ContentView: View {
                         Button(action: {
                             if(weight != nil && weight != 0){
                                 let dataLiters = ((weight ?? 1) * 0.03)
-                                liters = dataLiters
+                               liters = dataLiters
                                 
                                 let dataCups = dataLiters / 0.24
                     
@@ -43,7 +43,7 @@ struct ContentView: View {
                         }, label: {
                             calculateButton
                         }).navigationDestination(isPresented: $readyToNavigate) {
-                            NeedWaterView(cups: cups, liters: liters)
+                           NeedWaterView(cups: cups, liters: liters)
                         }
                     }
                     

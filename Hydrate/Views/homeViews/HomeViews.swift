@@ -41,8 +41,8 @@ struct HomeViews: View {
                            .padding(.bottom, 10)
                    }
                )
-    
     }
+   
 }
 
 #Preview {
