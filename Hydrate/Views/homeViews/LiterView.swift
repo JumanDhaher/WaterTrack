@@ -59,6 +59,10 @@ struct LiterView: View {
             }
         }
     }
+    
+    func sendWaterLitters(){
+        let litters = incrementValue
+    }
 }
  
 struct CustomStepper: View {

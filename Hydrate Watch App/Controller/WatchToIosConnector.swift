@@ -8,7 +8,7 @@
 import Foundation
 import WatchConnectivity
 
-class WatchToIOSConnecter: NSObject, WCSessionDelegate{
+class WatchToIOSConnecter: NSObject, WCSessionDelegate, ObservableObject{
     var session: WCSession
     init(session: WCSession = .default) {
         self.session = session
@@ -21,8 +21,14 @@ class WatchToIOSConnecter: NSObject, WCSessionDelegate{
         
     }
     
-    func sendCountWaterToIOS(){
-        
+    func sendCountWaterToIOS(litters: Double){
+        if(session.isReachable){
+            let data: [String: Any] = ["litters": litters]
+            session.sendMessage(data, replyHandler: nil)
+
+        }else{
+            print("Error")
+        }
     }
     
 }

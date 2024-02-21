@@ -30,6 +30,9 @@
 		6FECD2982B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FECD2972B7BA0AC00ECB1C9 /* Hydrate_Watch_AppUITestsLaunchTests.swift */; };
 		6FF482BA2B85D03E00F676AC /* WatchConnecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF482B92B85D03E00F676AC /* WatchConnecter.swift */; };
 		6FF482BD2B85D16200F676AC /* WatchToIosConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF482BC2B85D16200F676AC /* WatchToIosConnector.swift */; };
+		6FF482BE2B85D67E00F676AC /* LiterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBC2B7CC445001C981F /* LiterView.swift */; };
+		6FF482BF2B85D6C600F676AC /* SplashViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E2BBE2B7CC452001C981F /* SplashViews.swift */; };
+		6FF482C02B85D6DA00F676AC /* SecondTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1EB7D82B7E0CA100F38CD1 /* SecondTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -562,6 +565,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FF482C02B85D6DA00F676AC /* SecondTab.swift in Sources */,
+				6FF482BF2B85D6C600F676AC /* SplashViews.swift in Sources */,
+				6FF482BE2B85D67E00F676AC /* LiterView.swift in Sources */,
 				6FECD27D2B7BA0AB00ECB1C9 /* ContentView.swift in Sources */,
 				6FF482BD2B85D16200F676AC /* WatchToIosConnector.swift in Sources */,
 				6FECD27B2B7BA0AB00ECB1C9 /* HydrateApp.swift in Sources */,

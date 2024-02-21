@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Hydrate_Watch_AppApp: App {
+struct Hydrate_Watch_AppApp: App { 
     var body: some Scene {
         WindowGroup {
             ContentView()

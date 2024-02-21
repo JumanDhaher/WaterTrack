@@ -8,7 +8,7 @@
 import Foundation
 import WatchConnectivity
 
-class WatchConnecter: NSObject, WCSessionDelegate{
+class WatchConnecter: NSObject, WCSessionDelegate, ObservableObject{
     var session: WCSession
     init(session: WCSession = .default) {
         self.session = session
@@ -30,6 +30,6 @@ class WatchConnecter: NSObject, WCSessionDelegate{
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        
+        print(message)
     }
 }
